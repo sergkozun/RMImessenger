@@ -3,6 +3,7 @@ package Util;
 import java.io.Serializable;
 import java.util.UUID;
 
+// Класс для создания наших юзеров (клиентов) для регистрации на сервере (для наглядности и ООП) - необязательно
 public class User implements Serializable {
 
     private UUID uuid;

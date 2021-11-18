@@ -4,15 +4,14 @@ import Server.ServerInterface;
 import Util.CheckingNewMessagesService;
 import Util.User;
 
-import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.util.Scanner;
 import java.util.UUID;
 
-
-public class Client {
+// Сделал второго клиента для проверок, с повторением кода, на скорую руку.
+public class Client2 {
     public static void main(String[] args) throws RemoteException {     // запуск осуществляется с VM-option '-Djava.security.policy=.app.policy'
 
         // проверка безопасности подключения (корневой файл .app.policy)
@@ -50,4 +49,5 @@ public class Client {
         checkingNewMessages.interrupt();    // отключаем второй поток (сервис для отслеживания сообщений)
         stubObject.unRegisterClient(user);  // удаляем клиента из базы сервера
     }
+
 }
